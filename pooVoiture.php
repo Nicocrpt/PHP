@@ -19,7 +19,7 @@
 
         public function getAll() {return "<br>$this->_marque - $this->_modele - $this->color - $this->_km km";}
 
-        public function __construct($marque, $modele, $couleur, $km)
+        public function __construct($marque=NULL, $modele=NULL, $couleur=NULL, $km=NULL)
         {
             $this->_marque = $marque ;
             $this->_modele = $modele ;
@@ -29,7 +29,7 @@
 
         public function __destruct()
         {
-            echo "__destruct" ;
+            echo "<br>__destruct" ;
         }
     }
 
