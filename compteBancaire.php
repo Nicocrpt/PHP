@@ -57,15 +57,15 @@
 
     $livretA1 = new Livret_a("Pierre Dupont", 2784, 3.5);
 
+    echo '<br>initialisation' ;
     $livretA1->ToString();
 
-    echo "<br>" . $livretA1->getSolde();
-    echo "<br>" . $livretA1->getTaux()/100 . "<br>";
-
-    $livretA1-> Crediter(1000) ;
+    $livretA1-> debiter(1000) ;
+    echo '<br>debit 1000€';
+    $livretA1->ToString();
     
-    $livretA1->Debiter($livretA1->CalculInterets($livretA1->getSolde(), $livretA1->getTaux())) ;
-
+    $livretA1->crediter($livretA1->CalculInterets($livretA1->getSolde(), $livretA1->getTaux())) ;
+    echo "<br>credit du taux d'interet" ;
     $livretA1->ToString();
 
     
