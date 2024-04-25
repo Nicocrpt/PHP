@@ -14,7 +14,7 @@
             foreach ($props as $key=>$value)
             {
                 $methode = 'set' . ucfirst($key);
-                echo "<br>$methode" ;
+                // echo "<br>$methode" ;
                 if (method_exists($this, $methode)) {$this->$methode($value);}
                 else {echo "<br>la methode n'existe pas";}
             }
