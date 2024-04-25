@@ -62,6 +62,8 @@
     echo "<br>" . $livretA1->getSolde();
     echo "<br>" . $livretA1->getTaux()/100 . "<br>";
 
+    $livretA1-> Crediter(1000) ;
+    
     $livretA1->Debiter($livretA1->CalculInterets($livretA1->getSolde(), $livretA1->getTaux())) ;
 
     $livretA1->ToString();
